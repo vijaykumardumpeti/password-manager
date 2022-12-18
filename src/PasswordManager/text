@@ -1,0 +1,8 @@
+ <div className="no-results-container">
+              <img
+                className="no-password-image"
+                alt="no passwords"
+                src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+              />
+              <h1 className="no-passwords-heading">No Passwords</h1>
+            </div>
