@@ -33,7 +33,7 @@ export default class ListItem extends Component {
     return (
       <li className="list-item-container">
         <div className={`profile-image-container ${randomColor}`}>
-          <p>Y</p>
+          <p>{{userName[0]}}</p>
         </div>
         <div className="details-container">
           <p>{website}</p>
