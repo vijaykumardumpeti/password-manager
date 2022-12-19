@@ -11,7 +11,7 @@ export default class PasswordManager extends Component {
     passwordInput: '',
     userDetailsList: [],
     searchInput: '',
-    randomColor: '',
+
     checked: false,
   }
 
@@ -60,13 +60,13 @@ export default class PasswordManager extends Component {
       website: websiteInput,
       userName: userNameInput,
       password: passwordInput,
+      randomColor: colorText,
     }
     this.setState(prevState => ({
       userDetailsList: [...prevState.userDetailsList, objectItem],
       websiteInput: '',
       userNameInput: '',
       passwordInput: '',
-      randomColor: colorText,
     }))
   }
 
@@ -95,7 +95,6 @@ export default class PasswordManager extends Component {
       showPasswordsButtonClicked,
       checked,
       searchInput,
-      randomColor,
     } = this.state
 
     console.log(userDetailsList)
@@ -121,7 +120,6 @@ export default class PasswordManager extends Component {
         <ul className="unordered-list-container">
           {searchedList.map(eachObject => (
             <ListItem
-              randomColor={randomColor}
               key={eachObject.id}
               eachObject={eachObject}
               showPasswordsButtonClicked={showPasswordsButtonClicked}
