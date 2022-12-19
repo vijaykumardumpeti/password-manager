@@ -8,9 +8,8 @@ export default class ListItem extends Component {
       deleteListObject,
       showPasswordsButtonClicked,
       checked,
-      randomColor,
     } = this.props
-    const {id, website, userName, password} = eachObject
+    const {id, website, userName, password, randomColor} = eachObject
     console.log(checked)
 
     let starsImageOrPassword
@@ -33,7 +32,7 @@ export default class ListItem extends Component {
     return (
       <li className="list-item-container">
         <div className={`profile-image-container ${randomColor}`}>
-          <p>{{userName[0]}}</p>
+          <p>{userName[0]}</p>
         </div>
         <div className="details-container">
           <p>{website}</p>
@@ -42,7 +41,6 @@ export default class ListItem extends Component {
         </div>
         <div className="delete-button-container">
           <button
-            testid="delete"
             onClick={this.deletingTheItem}
             className="delete-button-container"
             type="button"
